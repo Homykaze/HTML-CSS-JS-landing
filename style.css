@@ -1,3 +1,108 @@
-body{
-    background-color: #eaeaea;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Ubuntu&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
 }
+
+body{
+    background-color: #101010;
+    color: #eaeaea;
+    font-family: 'Ubuntu', sans-serif;
+    line-height: 1.4;
+}
+
+.container{
+    max-width: 1100px;
+    margin: auto;
+}
+
+.btn{
+    text-decoration: none;
+    border: 2px solid #6ca1b0;
+    padding: 1rem 2rem;
+    display: inline-block;
+    font-weight: 800;
+    box-shadow: 1px 1px 5px #6ca1b0;;
+}
+
+/* GLOBAL ABOVE */
+
+
+/* MAIN BELOW */
+main{
+    margin-bottom: 250px;
+    margin-top: 25vh;
+}
+
+main .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main .left{
+    padding-right: 1rem;
+}
+
+h6{
+    color: #bbff3d;
+    font-size: 0.8rem;
+}
+
+h1{
+    padding: 0.3rem 0;
+}
+
+main .highlight{
+    color: #bbff3d;
+}
+
+main p {
+    font-size: 1.1rem;
+    padding: 0.8rem 0;
+}
+
+main a{
+    color: #6ca1b0;
+}
+
+main .btn{
+    margin: 0.7rem 1rem 0 0;
+}
+
+main img {
+    width: 20rem;
+}
+
+main .right {
+    position: relative;
+}
+
+main .right .frame{
+    width: 20rem;
+    height:20rem;
+    background-color: #bbff3d;
+    position:absolute;
+    top: 2rem;
+    left: 2rem;
+    z-index: -2;
+    box-shadow: 2px 2px 15px #bbff3d;
+}
+
+main .right .emptiness{
+    width: 19rem;
+    height:19rem;
+    background-color: #000;
+    position:absolute;
+    top: 2.5rem;
+    left: 2.5rem;
+    z-index: -1;
+}
+
+/* MAIN ABOVE */
+
+section{
+    margin-bottom: 250px;
+}
+
