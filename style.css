@@ -12,9 +12,14 @@ body{
     line-height: 1.4;
 }
 
+a, abbr{
+    text-decoration: none;
+}
+
 .container{
     max-width: 1100px;
     margin: auto;
+    padding: 0 2rem;
 }
 
 .btn{
@@ -23,15 +28,32 @@ body{
     padding: 1rem 2rem;
     display: inline-block;
     font-weight: 800;
-    box-shadow: 1px 1px 5px #6ca1b0;;
+    box-shadow: 1px 1px 5px #6ca1b0;
+    transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
 }
 
+.btn:hover{
+    background-color: #6ca1b0;
+    box-shadow: 0 0 10px #6ca1b0;
+    color: #bbff3d;
+}
+
+.title{
+    font-size: 2.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    color:#eaeaea;
+    margin-bottom: 40px;
+}
 /* GLOBAL ABOVE */
+
+
+
 
 
 /* MAIN BELOW */
 main{
-    margin-bottom: 250px;
+    margin-bottom: 50vh;
     margin-top: 25vh;
 }
 
@@ -42,7 +64,7 @@ main .container{
 }
 
 main .left{
-    padding-right: 1rem;
+    padding-right: 2rem;
 }
 
 h6{
@@ -77,6 +99,8 @@ main img {
 
 main .right {
     position: relative;
+    padding-right:2.5rem;
+    padding-bottom: 1rem;
 }
 
 main .right .frame{
@@ -87,22 +111,276 @@ main .right .frame{
     top: 2rem;
     left: 2rem;
     z-index: -2;
-    box-shadow: 2px 2px 15px #bbff3d;
+    box-shadow: 0 0 17px #bbff3d;
 }
 
 main .right .emptiness{
     width: 19rem;
-    height:19rem;
-    background-color: #000;
+    height: 19rem;
+    background-color: #101010;
     position:absolute;
     top: 2.5rem;
     left: 2.5rem;
     z-index: -1;
 }
-
 /* MAIN ABOVE */
 
+/* PROJECTS BELOW */
 section{
-    margin-bottom: 250px;
+    margin-bottom: 50vh;
 }
 
+.projects .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.project1, .project2, .project3, .project4{
+    min-height: 200px;
+    min-width: 200px;
+    height: 13vw;
+    width: 13vw;
+    border-radius: 50%;
+
+    background-size: 100%;
+    background-repeat: no-repeat;
+    transition: box-shadow 0.1s ease;
+}
+
+.project1{
+    background-image:url("./images/maze.png");
+}
+
+.project2{
+    background-image:url("./images/sort.png");
+}
+
+.project3{
+    background-image:url("./images/speedtest.png");
+}
+
+.project4{
+    background-image:url("./images/store.png");
+}
+
+.project1 h3, .project2 h3, .project3 h3, .project4 h3{
+    color:#101010;
+    background-color: #6ca1b0;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: opacity 0.2s ease;
+    box-shadow: 0px 0px 10px #6ca1b0;
+}
+
+.project1:hover, .project2:hover, .project3:hover, .project4:hover{
+    box-shadow: 0px 0px 30px #6ca1b0;
+}
+
+.project1 h3:hover, .project2 h3:hover, .project3 h3:hover, .project4 h3:hover{
+    opacity: 0;
+}
+/* PROJECTS ABOVE */
+
+/* EXPERIENCE BELOW */
+.experience .card, .experience .card1{
+    margin: 0 0 1rem 0;
+    background-color: #000;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 1rem 2rem;
+    box-shadow: 0 3px 10px #000;
+}
+
+.experience a{
+    color: #6ca1b0;
+}
+
+.experience .card{
+    border-right: 3px solid #6ca1b0;
+}
+
+.experience .card1{
+    border-right: 3px solid #bbff3d;
+}
+
+.experience .card1 h3, .experience .card h3{
+    color: #bbff3d;
+}
+
+.experience .card1 h6, .experience .card h6{
+    color: #eaeaea;
+}
+
+.experience .highlight{
+    color:#bbff3d;
+}
+/* EXPERIENCE ABOVE */
+
+/* EDUCATION BELOW */
+.education .container{
+    position: relative;
+    display: flex;
+}
+
+.education .edu1{
+    width: 33.3%;
+    background-color: #6ca1b0;
+    border: 2px solid #eaeaea;
+    clip-path: polygon(0 0, 98% 0, 92% 100%, 0 100%);
+    padding:10px 30px 10px 10px;
+}
+
+
+.education .edu2{
+    width: 33.3%;
+    background-color: #eaeaea;
+    color:#101010;
+    text-align: center;
+    border: 2px solid #6ca1b0;
+    clip-path: polygon(8% 0%, 98% 0, 92% 100%, 2% 100%);
+    padding:10px 30px;
+}
+
+.education .edu3{
+    width: 33.3%;
+    background-color: #bbff3d;
+    color:#101010;
+    text-align: right;
+    border: 2px solid #eaeaea;
+    clip-path: polygon(8% 0%, 100% 0, 100% 100%, 2% 100%);
+    padding:10px 10px 10px 30px;
+}
+
+.edu1 h3{
+    color:#101010;
+}
+
+.edu2 h3, .edu3 h3{
+    color:#6ca1b0;
+}
+
+.edu1 h4, .edu2 h4, .edu3 h4{
+    margin-bottom: 1rem;
+}
+
+.edu1 a{
+    color:#101010;
+    text-decoration: underline;
+}
+
+.edu2 a, .edu3 a{
+    color:#6ca1b0;
+    text-decoration: underline;
+}
+/* EDUCATION ABOVE */
+
+/* SKILLS BELOW */
+.skills .container ul{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.5rem;
+}
+
+.skills ul li{
+    list-style: none;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    margin: 8px;
+}
+
+.skills .front{
+    border: 2px solid #6ca1b0; 
+    box-shadow: 0 0 10px #6ca1b0;
+    color: #6ca1b0;
+}
+
+.skills .back{
+    border: 2px solid #bbff3d;
+    box-shadow: 0 0 10px #bbff3d;
+    color: #bbff3d;
+}
+
+.skills .phone{
+    border: 2px solid #eaeaea;
+    box-shadow: 0 0 10px #eaeaea;
+}
+
+.skills .devops{
+    border: 2px solid purple;
+    box-shadow: 0 0 10px purple;
+    color: purple;
+}
+
+.tech-skills{
+    margin-bottom: 40px;
+}
+
+.soft-skills{
+    margin-top: 4rem;
+}
+
+.soft-skills li{
+    border: 2px solid aqua;
+    box-shadow: 0 0 10px aqua;
+    color: aqua;
+}
+/* SKILLS ABOVE */
+
+/* CERTIFICATES BELOW */
+.certificates{
+    font-size: 1.5rem;
+}
+
+.certificates .container p{
+    color:#6ca1b0;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    width: 100%;
+}
+/* CERTIFICATES ABOVE */
+
+/* FOOTER BELOW */
+footer{
+    border-top: 2px solid #bbff3d;
+    box-shadow: 0 0 5px #bbff3d;
+    
+}
+
+footer .container{
+    min-height:150px;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer p{
+    border: 2px solid #bbff3d;
+    letter-spacing: 1px;
+    padding: 1rem 2rem;
+    box-shadow: 0 0 5px #bbff3d;
+}
+
+footer .btn{
+    color:#eaeaea;
+    text-decoration: none;
+    border: 2px solid #bbff3d;
+    padding: 1rem 2rem;
+    display: inline-block;
+    font-weight: 800;
+    box-shadow: 1px 1px 5px #bbff3d;
+    transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+footer .btn:hover{
+    background-color: #bbff3d;
+    box-shadow: 0 0 10px #bbff3d;
+    color: #101010;
+}
+/* FOOTER ABOVE */
