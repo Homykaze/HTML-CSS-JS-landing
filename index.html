@@ -4,24 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Egor Frygin | Full Stack Developer</title>
 </head>
 <body>
-    <main>
+    <main data-aos="fade-up" data-aos-mirror="true" data-aos-delay="100" data-aos-duration="800" data-aos-offset="100">
         <div class = "container">
-            <div class = "left">
+            <div class = "intro">
                 <h6>Hi! My name is</h6>
                 <h1>Egor Frygin</h1>
                 <h2>Full Stack & Software <span class = "highlight">Developer</span></h2>
+            </div>
+            <div class = "summary">
                 <p>
                     Graduate of a mechanical engineering degree program, but incredibly passionate about coding. Skilled and responsible developer with diverse expertise in IT. Currently finishing a bootcamp course at <a href="https://www.integrify.io/">Integrify</a>, which extensively covers DevOps and the essentials of Full Stack development. Profcient in many applications related to project development, such as GitHub, Microsoft Visual Studio, Excel, CodeBlocks, Visual Studio Code, and others. Quick learner, enthusiastic, energetic and driven to come up with cutting-edge solutions.
                 </p>
+            </div>
+            <div class="buttons">
                 <a href="https://github.com/Homykaze" class="btn">GitHub</a>
                 <a href="https://www.linkedin.com/in/egor-frygin-a8324817a/" class="btn">LinkedIn</a>
-                <a href="#" class="btn">Projects</a>
+                <a href="#projects" class="btn">Projects</a>
             </div>
-            <div class = "right">
+            <div class = "profile">
                 <img src="images/CVBLACKP.png" alt="Image of Egor">
                 <div class = "emptiness"></div>
                 <div class = "frame"></div>
@@ -29,34 +34,32 @@
         </div>
     </main>
 
-    <section class="projects">
+    <section class="projects" id = "projects" data-aos="fade-up" data-aos-mirror="true" data-aos-delay="50" data-aos-duration="800" data-aos-offset="150">
         <p class = "title">PROJECTS</p>
         <div class = "container">
             <abbr title="Pathfinding and maze-generating algoritms">
-                <a href="#">
+                <a href="project1.html" target="_blank">
                     <div class="project1">
-                        <h3>
-                            Pathfinder
-                        </h3>
+                        <h3>Pathfinder</h3>
                     </div>
                 </a>
             </abbr>
             <abbr title="The most popular sorting algoritms">
-                <a href="https://moonlit-melba-02cf2d.netlify.app/">
+                <a href="https://moonlit-melba-02cf2d.netlify.app/" target="_blank">
                     <div class="project2">
                         <h3>Sorting Visualizer</h3>
                     </div>
                 </a>
             </abbr>
             <abbr title="Speed typing test with a timer">
-                <a href="#">
+                <a href="project2.html" target="_blank">
                     <div class="project3">
                         <h3>Speed Typing Test</h3>
                     </div>
                 </a>
             </abbr>
             <abbr title="A mock-up ecommerce service">
-                <a href="https://regal-begonia-ff000c.netlify.app/">
+                <a href="https://regal-begonia-ff000c.netlify.app/" target="_blank">
                     <div class="project4">
                         <h3>EFstore</h3>
                     </div>
@@ -65,7 +68,7 @@
         </div>
     </section>
 
-    <section class="experience">
+    <section class="experience" data-aos="fade-up" data-aos-mirror="true" data-aos-delay="100" data-aos-duration="800" data-aos-offset="250">
         <p class = "title">EXPERIENCE</p>
         <div class = "container">
             <div class="card1">
@@ -111,7 +114,7 @@
         </div>
     </section>
 
-    <section class = "education">
+    <section class = "education" data-aos="fade-up" data-aos-mirror="true" data-aos-delay="100" data-aos-duration="800" data-aos-offset="200">
         <p class = "title">EDUCATION</p>
         <div class="container">
             <div class = "edu1">
@@ -160,7 +163,7 @@
         </div>
     </section>
 
-    <section class = "skills">
+    <section class = "skills" data-aos="fade-up" data-aos-mirror="true" data-aos-delay="100" data-aos-duration="800" data-aos-offset="150">
         <div class="container">
             <p class = "title">TECHNICAL SKILLS</p>
             <ul class = "tech-skills">
@@ -192,14 +195,14 @@
             </ul>
             <p class = "title">SPOKEN LANGUAGES</p>
             <ul class = "soft-skills">
-                <li>English</li>
-                <li>Finnish</li>
-                <li>Russian</li>
+                <abbr title="Fluent, Full Professional Proficiency"><li>English</li></abbr>
+                <abbr title="Basic, Limited Working Proficiency"><li>Finnish</li></abbr>
+                <abbr title="Native"><li>Russian</li></abbr>
             </ul>
         </div>
     </section>
 
-    <section class = "certificates">
+    <section class = "certificates" data-aos="fade-up" data-aos-mirror="true" data-aos-delay="100" data-aos-duration="800" data-aos-offset="0">
         <p class = "title">CERTIFICATES</p>
         <div class="container">
             <p>• Occupational Safety Card (Työturvallisuuskeskus ry), Issued Nov 2019, Expires Oct 2024</p>
@@ -209,11 +212,34 @@
 
     <footer>
         <div class="container">
-            <a href="#" class = "btn">Contact</a>
+            <span onclick = "on()" class = "btn">Contact</span>
             <p>EGOR FRYGIN, Copyright © 2022 HOMYKAZE.GITHUB.IO</p>
-            <a href="#" class = "btn">Download CV</a>
+            <a href="CV_soft.pdf" target="_blank" class = "btn">Download CV</a>
         </div>
     </footer>
 
+    <!--Overlaying window onclick="on()"-->	
+	<div id = "overlay" onclick = "off()">
+		<div id = "text">
+			<p>Call to: <a href = "tel:+358403680863">+358403680863</a></p>
+			<p>Email to: <a href = "mailto:efrygine@mail.ru">efrygine@mail.ru</a></p>
+		</div>
+	</div>
+
+	<script>
+        //Overlaying window 
+		function on() {
+			document.getElementById("overlay").style.display = "block";
+		}
+
+		function off() {
+			document.getElementById("overlay").style.display = "none";
+		}
+    </script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
